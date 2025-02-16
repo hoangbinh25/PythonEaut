@@ -1,6 +1,5 @@
 import random
 
-# Kích thước ma trận
 n = 12
 
 # Tạo ma trận vuông cấp n

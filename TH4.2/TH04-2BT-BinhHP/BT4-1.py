@@ -1,14 +1,16 @@
 import numpy as np
 
-# Đọc dữ liệu từ file Temp.txt
+file_path = 'D:/Documents/DHCNDA/Python/Class/TH4.2/TH04-2BT-BinhHP/temp.txt'
+
 try:
-    data_numpy = np.loadtxt('Temp.txt', delimiter=',')  # Đọc dữ liệu với dấu phẩy làm dấu phân cách
+    # Đọc dữ liệu với dấu cách làm dấu phân cách
+    data_numpy = np.loadtxt(file_path, delimiter=' ')
 
     # Lấy thông tin về kích thước, số chiều, kiểu dữ liệu và số phần tử
-    shape = data_numpy.shape          # Kích thước của mảng
-    ndim = data_numpy.ndim            # Số chiều của mảng
-    dtype = data_numpy.dtype          # Kiểu dữ liệu của mảng
-    size = data_numpy.size            # Số phần tử trong mảng
+    shape = data_numpy.shape
+    ndim = data_numpy.ndim
+    dtype = data_numpy.dtype
+    size = data_numpy.size
 
     # In các thông tin
     print(f"Kích thước của data_numpy: {shape}")
@@ -19,6 +21,6 @@ try:
 except OSError:
     print("Không thể mở file Temp.txt. Vui lòng kiểm tra lại đường dẫn hoặc file.")
 except ValueError:
-    print("Dữ liệu trong file không hợp lệ hoặc không thể phân tích.")
+    print(f"Dữ liệu trong file không hợp lệ hoặc không thể phân tích: {ValueError}")
 except Exception as e:
     print(f"Đã xảy ra lỗi: {e}")
